@@ -1,4 +1,5 @@
 import mdcreation
+import os
 
 fileName = str(input("What is the file name? (excluding .md)"))
 print(fileName)
@@ -13,6 +14,7 @@ for i in range(numSections):
   sectionBody = str(input("Text of body"))
   print(sectionBody)
   sectionArray.append([sectionHeader, sectionBody])
-
+if not os.path.exists("./output"):
+  os.makedirs("./output")
 mdcreation.creation(fileName)
 mdcreation.textCreation(fileName, title, sectionArray)
