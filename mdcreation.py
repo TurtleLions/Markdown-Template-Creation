@@ -1,9 +1,9 @@
 def creation(fileName):
-  file = open("{}.md".format(fileName),"x")
+  file = open("output/{}.md".format(fileName),"x")
   file.close()
 
 def textCreation(fileName, title, sectionArray):
-  file = open("{}.md".format(fileName), "a")
+  file = open("output/{}.md".format(fileName), "a")
   file.write("# {}\n".format(title))
   for section in sectionArray:
     file.write("## {}\n".format(section[0]))
